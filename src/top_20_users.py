@@ -15,7 +15,7 @@ def main():
 	dbh = c["mydb"]
 
 	#Return at most 20 users sorted by score in descending order AKA highscore
-	users = dbh.users.find().sort(("score", pymongo.DESCENDING)).limit(2000)
+	users = dbh.users.find().sort(("score", pymongo.DESCENDING)).limit(2)
 	for user in users:
 		print(user.get("username"), user.get("score",0))
 
